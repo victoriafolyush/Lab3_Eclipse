@@ -1,4 +1,4 @@
-package ua.lviv.iot.SkiResortMachinery.models;
+package main.java.ua.lviv.iot.SkiResortMachinery.models;
 
 
 public class SkiResortMachinery {

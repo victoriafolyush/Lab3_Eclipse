@@ -1,8 +1,8 @@
-package ua.lviv.iot.SkiResortMachinery.managers;
+package main.java.ua.lviv.iot.SkiResortMachinery.managers;
 
-import ua.lviv.iot.SkiResortMachinery.models.Fuel;
-import ua.lviv.iot.SkiResortMachinery.models.SkiResortMachinery;
-import ua.lviv.iot.SkiResortMachinery.models.WheelFormula;
+import main.java.ua.lviv.iot.SkiResortMachinery.models.Fuel;
+import main.java.ua.lviv.iot.SkiResortMachinery.models.SkiResortMachinery;
+import main.java.ua.lviv.iot.SkiResortMachinery.models.WheelFormula;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,5 +1,5 @@
-package ua.lviv.iot.SkiResortMachinery.managers;
-import ua.lviv.iot.SkiResortMachinery.models.*;
+package main.java.ua.lviv.iot.SkiResortMachinery.managers;
+import main.java.ua.lviv.iot.SkiResortMachinery.models.*;
 
 public class Main {
     public static void main(String[] args) {
