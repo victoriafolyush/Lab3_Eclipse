@@ -9,49 +9,54 @@ public class SwivelMast extends SkiResortMachinery {
 
     }
 
-    public SwivelMast(double lengthOfFlow, double heightOfFlow, double oscillator) {
-        this.lengthOfFlow = lengthOfFlow;
-        this.heightOfFlow = heightOfFlow;
-        this.oscillator = oscillator;
+    public SwivelMast(final double lengthOfFlowTemp,
+            final double heightOfFlowTemp, final double oscillatorTemp) {
+        this.lengthOfFlow = lengthOfFlowTemp;
+        this.heightOfFlow = heightOfFlowTemp;
+        this.oscillator = oscillatorTemp;
     }
 
-    public SwivelMast(String name, String producer, double fuelPerHour, double mileage, Fuel typeOfFuel, WheelFormula wheelFormula, double lengthOfFlow, double heightOfFlow, double oscillator) {
-        super(name, producer, fuelPerHour, mileage, typeOfFuel, wheelFormula);
-        this.lengthOfFlow = lengthOfFlow;
-        this.heightOfFlow = heightOfFlow;
-        this.oscillator = oscillator;
+    public SwivelMast(final String nameTemp, final String producerTemp,
+            final double fuelPerHourTemp, final double mileageTemp,
+            final Fuel typeOfFuelTemp, final WheelFormula wheelFormulaTemp,
+            final double lengthOfFlowTemp, final double heightOfFlowTemp,
+            final double oscillatorTemp) {
+        super(nameTemp, producerTemp, fuelPerHourTemp, mileageTemp,
+                typeOfFuelTemp, wheelFormulaTemp);
+        this.lengthOfFlow = lengthOfFlowTemp;
+        this.heightOfFlow = heightOfFlowTemp;
+        this.oscillator = oscillatorTemp;
     }
 
-    public double getLengthOfFlow() {
+    public final double getLengthOfFlow() {
         return lengthOfFlow;
     }
 
-    public void setLengthOfFlow(double lengthOfFlow) {
-        this.lengthOfFlow = lengthOfFlow;
+    public final void setLengthOfFlow(final double lengthOfFlowTemp) {
+        this.lengthOfFlow = lengthOfFlowTemp;
     }
 
-    public double getHeightOfFlow() {
+    public final double getHeightOfFlow() {
         return heightOfFlow;
     }
 
-    public void setHeightOfFlow(double heightOfFlow) {
-        this.heightOfFlow = heightOfFlow;
+    public final void setHeightOfFlow(final double heightOfFlowTemp) {
+        this.heightOfFlow = heightOfFlowTemp;
     }
 
-    public double getOscillator() {
+    public final double getOscillator() {
         return oscillator;
     }
 
-    public void setOscillator(double oscillator) {
-        this.oscillator = oscillator;
+    public final void setOscillator(final double oscillatorTemp) {
+        this.oscillator = oscillatorTemp;
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                " Length of flow = " + lengthOfFlow + "\n" +
-                ", Hight of flow = " + heightOfFlow + "\n" +
-                ", Oscillator = " + oscillator + "\n" +
-                '\n';
+        return super.toString() + " Length of flow = " + lengthOfFlow
+                + "\n" + ", Hight of flow = " + heightOfFlow
+                + "\n" + ", Oscillator = " + oscillator
+                + "\n" + '\n';
     }
 }

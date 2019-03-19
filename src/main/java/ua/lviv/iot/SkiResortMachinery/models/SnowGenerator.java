@@ -5,53 +5,60 @@ public class SnowGenerator extends SkiResortMachinery {
     private String nucleation;
     private double rotation;
 
-    SnowGenerator (){
+    SnowGenerator() {
 
     }
 
-    public SnowGenerator(double boardCompressorPower, String nucleation, double rotation) {
-        this.boardCompressorPower = boardCompressorPower;
-        this.nucleation = nucleation;
-        this.rotation = rotation;
+    public SnowGenerator(final double boardCompressorPowerTemp,
+            final String nucleationTemp, final double rotationTemp) {
+        this.boardCompressorPower = boardCompressorPowerTemp;
+        this.nucleation = nucleationTemp;
+        this.rotation = rotationTemp;
     }
 
-    public SnowGenerator(String name, String producer, double fuelPerHour, double mileage, Fuel typeOfFuel, WheelFormula wheelFormula, double boardCompressorPower, String nucleation, double rotation) {
-        super(name, producer, fuelPerHour, mileage, typeOfFuel, wheelFormula);
-        this.boardCompressorPower = boardCompressorPower;
-        this.nucleation = nucleation;
-        this.rotation = rotation;
+    public SnowGenerator(final String name, final String producer,
+            final double fuelPerHour, final double mileage,
+            final Fuel typeOfFuel, final WheelFormula wheelFormulaTemp,
+            final double boardCompressorPowerTemp,
+            final String nucleationTemp, final double rotationTemp) {
+        super(name, producer, fuelPerHour,
+                mileage, typeOfFuel, wheelFormulaTemp);
+        this.boardCompressorPower = boardCompressorPowerTemp;
+        this.nucleation = nucleationTemp;
+        this.rotation = rotationTemp;
     }
 
-    public double getBoardCompressorPower() {
+    public final double getBoardCompressorPower() {
         return boardCompressorPower;
     }
 
-    public void setBoardCompressorPower(double boardCompressorPower) {
-        this.boardCompressorPower = boardCompressorPower;
+    public final void setBoardCompressorPower(
+            final double boardCompressorPowerTemp) {
+        this.boardCompressorPower = boardCompressorPowerTemp;
     }
 
-    public String getNucleation() {
+    public final String getNucleation() {
         return nucleation;
     }
 
-    public void setNucleation(String nucleation) {
-        this.nucleation = nucleation;
+    public final void setNucleation(final String nucleationTemp) {
+        this.nucleation = nucleationTemp;
     }
 
-    public double getRotation() {
+    public final double getRotation() {
         return rotation;
     }
 
-    public void setRotation(double rotation) {
-        this.rotation = rotation;
+    public final void setRotation(final double rotationTemp) {
+        this.rotation = rotationTemp;
     }
 
     @Override
     public String toString() {
         return super.toString() +
-                " Board compressor power = " + boardCompressorPower  + "\n" +
-                ", Nucleation = '" + nucleation + '\''  + "\n" +
-                ", Rotation = " + rotation + "\n" +
-                '\n';
+                " Board compressor power = " + boardCompressorPower
+                + "\n" + ", Nucleation = '" + nucleation
+                + "\n" + ", Rotation = " + rotation
+                + "\n" + '\n';
     }
 }

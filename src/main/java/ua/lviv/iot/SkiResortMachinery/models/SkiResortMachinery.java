@@ -1,6 +1,5 @@
 package main.java.ua.lviv.iot.SkiResortMachinery.models;
 
-
 public class SkiResortMachinery {
 
     private String name;
@@ -14,71 +13,74 @@ public class SkiResortMachinery {
 
     }
 
-    public SkiResortMachinery(String name, String producer, double fuelPerHour, double mileage, Fuel typeOfFuel, WheelFormula wheelFormula) {
-        this.name = name;
-        this.producer = producer;
-        this.fuelPerHour = fuelPerHour;
-        this.mileage = mileage;
-        this.typeOfFuel = typeOfFuel;
-        this.wheelFormula = wheelFormula;
+    public SkiResortMachinery(final String nameTemp,
+            final String producerTemp, final double fuelPerHourTemp,
+            final double mileageTemp, final Fuel typeOfFuelTemp,
+            final WheelFormula wheelFormulaTemp) {
+        this.name = nameTemp;
+        this.producer = producerTemp;
+        this.fuelPerHour = fuelPerHourTemp;
+        this.mileage = mileageTemp;
+        this.typeOfFuel = typeOfFuelTemp;
+        this.wheelFormula = wheelFormulaTemp;
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public final void setName(final String nameTemp) {
+        this.name = nameTemp;
     }
 
-    public String getProducer() {
+    public final String getProducer() {
         return producer;
     }
 
-    public void setProducer(String producer) {
-        this.producer = producer;
+    public final void setProducer(final String producerTemp) {
+        this.producer = producerTemp;
     }
 
-    public double getFuelPerHour() {
+    public final double getFuelPerHour() {
         return fuelPerHour;
     }
 
-    public void setFuelPerHour(double fuelPerHour) {
-        this.fuelPerHour = fuelPerHour;
+    public final void setFuelPerHour(final double fuelPerHourTemp) {
+        this.fuelPerHour = fuelPerHourTemp;
     }
 
-    public double getMileage() {
+    public final double getMileage() {
         return mileage;
     }
 
-    public void setMileage(double mileage) {
-        this.mileage = mileage;
+    public final void setMileage(final double mileageTemp) {
+        this.mileage = mileageTemp;
     }
 
-    public Fuel getTypeOfFuel() {
+    public final Fuel getTypeOfFuel() {
         return typeOfFuel;
     }
 
-    public void setTypeOfFuel(Fuel typeOfFuel) {
-        this.typeOfFuel = typeOfFuel;
+    public final void setTypeOfFuel(final Fuel typeOfFuelTemp) {
+        this.typeOfFuel = typeOfFuelTemp;
     }
 
-    public WheelFormula getWheelFormula() {
+    public final WheelFormula getWheelFormula() {
         return wheelFormula;
     }
 
-    public void setWheelFormula(WheelFormula wheelFormula) {
-        this.wheelFormula = wheelFormula;
+    public final void setWheelFormula(final WheelFormula wheelFormulaTemp) {
+        this.wheelFormula = wheelFormulaTemp;
     }
 
     @Override
     public String toString() {
-        return
-                "Name = '" + name + '\n' +
-                        ", Producer = '" + producer + '\n' +
-                        ", Fuel per hour = " + fuelPerHour + '\n' +
-                        ", Mileage = " + mileage + '\n' +
-                        ", Type of fuel = " + typeOfFuel + '\n' +
-                        ", Wheel formula = " + wheelFormula + '\n';
+        return "Name = '" + name
+                + '\n' + ", Producer = '" + producer
+                + '\n' + ", Fuel per hour = " + fuelPerHour
+                + '\n' + ", Mileage = " + mileage
+                + '\n' + ", Type of fuel = " + typeOfFuel
+                + '\n' + ", Wheel formula = " + wheelFormula
+                + '\n';
     }
 }
