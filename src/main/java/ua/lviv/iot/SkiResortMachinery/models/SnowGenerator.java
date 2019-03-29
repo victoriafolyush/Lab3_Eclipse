@@ -1,28 +1,25 @@
-package main.java.ua.lviv.iot.SkiResortMachinery.models;
+package ua.lviv.iot.SkiResortMachinery.models;
 
 public class SnowGenerator extends SkiResortMachinery {
     private double boardCompressorPower;
     private String nucleation;
     private double rotation;
 
-    SnowGenerator() {
+    public SnowGenerator() {
 
     }
 
-    public SnowGenerator(final double boardCompressorPowerTemp,
-            final String nucleationTemp, final double rotationTemp) {
+    public SnowGenerator(final double boardCompressorPowerTemp, final String nucleationTemp,
+            final double rotationTemp) {
         this.boardCompressorPower = boardCompressorPowerTemp;
         this.nucleation = nucleationTemp;
         this.rotation = rotationTemp;
     }
 
-    public SnowGenerator(final String name, final String producer,
-            final double fuelPerHour, final double mileage,
-            final Fuel typeOfFuel, final WheelFormula wheelFormulaTemp,
-            final double boardCompressorPowerTemp,
+    public SnowGenerator(final String name, final String producer, final double fuelPerHour, final double mileage,
+            final Fuel typeOfFuel, final WheelFormula wheelFormulaTemp, final double boardCompressorPowerTemp,
             final String nucleationTemp, final double rotationTemp) {
-        super(name, producer, fuelPerHour,
-                mileage, typeOfFuel, wheelFormulaTemp);
+        super(name, producer, fuelPerHour, mileage, typeOfFuel, wheelFormulaTemp);
         this.boardCompressorPower = boardCompressorPowerTemp;
         this.nucleation = nucleationTemp;
         this.rotation = rotationTemp;
@@ -32,8 +29,7 @@ public class SnowGenerator extends SkiResortMachinery {
         return boardCompressorPower;
     }
 
-    public final void setBoardCompressorPower(
-            final double boardCompressorPowerTemp) {
+    public final void setBoardCompressorPower(final double boardCompressorPowerTemp) {
         this.boardCompressorPower = boardCompressorPowerTemp;
     }
 
@@ -55,10 +51,7 @@ public class SnowGenerator extends SkiResortMachinery {
 
     @Override
     public String toString() {
-        return super.toString() +
-                " Board compressor power = " + boardCompressorPower
-                + "\n" + ", Nucleation = '" + nucleation
-                + "\n" + ", Rotation = " + rotation
-                + "\n" + '\n';
+        return super.toString() + " Board compressor power = " + boardCompressorPower + "\n" + ", Nucleation = '"
+                + nucleation + "\n" + ", Rotation = " + rotation + "\n" + '\n';
     }
 }

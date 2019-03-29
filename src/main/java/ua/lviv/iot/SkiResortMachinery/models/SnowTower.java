@@ -1,28 +1,23 @@
-package main.java.ua.lviv.iot.SkiResortMachinery.models;
+package ua.lviv.iot.SkiResortMachinery.models;
 
 public class SnowTower extends SkiResortMachinery {
     private double height;
     private boolean hasBoardCopressor;
     private int waterJets;
 
-    SnowTower() {
+    public SnowTower() {
     }
 
-    public SnowTower(final double heightTemp,
-            final boolean hasBoardCopressorTemp,
-            final int waterJetsTemp) {
+    public SnowTower(final double heightTemp, final boolean hasBoardCopressorTemp, final int waterJetsTemp) {
         this.height = heightTemp;
         this.hasBoardCopressor = hasBoardCopressorTemp;
         this.waterJets = waterJetsTemp;
     }
 
-    public SnowTower(final String nameTemp, final String producerTemp,
-            final double fuelPerHourTemp, final double mileageTemp,
-            final Fuel typeOfFuelTemp, final WheelFormula wheelFormulaTemp,
-            final double heightTemp, final boolean hasBoardCopressorTemp,
-            final int waterJetsTemp) {
-        super(nameTemp, producerTemp, fuelPerHourTemp,
-                mileageTemp, typeOfFuelTemp, wheelFormulaTemp);
+    public SnowTower(final String nameTemp, final String producerTemp, final double fuelPerHourTemp,
+            final double mileageTemp, final Fuel typeOfFuelTemp, final WheelFormula wheelFormulaTemp,
+            final double heightTemp, final boolean hasBoardCopressorTemp, final int waterJetsTemp) {
+        super(nameTemp, producerTemp, fuelPerHourTemp, mileageTemp, typeOfFuelTemp, wheelFormulaTemp);
         this.height = heightTemp;
         this.hasBoardCopressor = hasBoardCopressorTemp;
         this.waterJets = waterJetsTemp;
@@ -40,8 +35,7 @@ public class SnowTower extends SkiResortMachinery {
         return hasBoardCopressor;
     }
 
-    public final void setHasBoardCopressor(
-            final boolean hasBoardCopressorTemp) {
+    public final void setHasBoardCopressor(final boolean hasBoardCopressorTemp) {
         this.hasBoardCopressor = hasBoardCopressorTemp;
     }
 
@@ -55,9 +49,7 @@ public class SnowTower extends SkiResortMachinery {
 
     @Override
     public String toString() {
-        return super.toString() + " Height = " + height
-                + "\n" + ", Has board copressor = " + hasBoardCopressor
-                + "\n" + ", Water jets = " + waterJets
-                + "\n" + "\n";
+        return super.toString() + " Height = " + height + "\n" + ", Has board copressor = " + hasBoardCopressor + "\n"
+                + ", Water jets = " + waterJets + "\n" + "\n";
     }
 }
