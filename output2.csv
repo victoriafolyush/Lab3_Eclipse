@@ -1,0 +1,6 @@
+Name , Producer, Fuel per hour, Mileage, Type of fuel, Wheel formula, Board compressor power, Nucleation, Rotation
+Snow Generator F43 , SMI, 12.5, 452.5, GAZOLINE, FOUR_FOUR, 64.5, nucleation, 60.0
+Name , Producer, Fuel per hour, Mileage, Type of fuel, Wheel formula, Height, Has board compressor, Water jets
+Carriage Lift Tower, SMI, 5.5, 552.5, KEROSENE, TWO_TWO, 734.0, true, 4
+Name , Producer, Fuel per hour, Mileage, Type of fuel, Wheel formula, Length of flow, Height of flow, Oscillator
+Swivel Mast Swing Arm , SMI, 3.5, 762.5, DIESEL, FOUR_TWO, 46.4, 67.2, 359.0
