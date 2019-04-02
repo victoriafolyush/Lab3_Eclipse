@@ -9,12 +9,6 @@ public class SwivelMast extends SkiResortMachinery {
 
     }
 
-    public SwivelMast(final double lengthOfFlowTemp, final double heightOfFlowTemp, final double oscillatorTemp) {
-        this.lengthOfFlow = lengthOfFlowTemp;
-        this.heightOfFlow = heightOfFlowTemp;
-        this.oscillator = oscillatorTemp;
-    }
-
     public SwivelMast(final String nameTemp, final String producerTemp, final double fuelPerHourTemp,
             final double mileageTemp, final Fuel typeOfFuelTemp, final WheelFormula wheelFormulaTemp,
             final double lengthOfFlowTemp, final double heightOfFlowTemp, final double oscillatorTemp) {
@@ -22,6 +16,15 @@ public class SwivelMast extends SkiResortMachinery {
         this.lengthOfFlow = lengthOfFlowTemp;
         this.heightOfFlow = heightOfFlowTemp;
         this.oscillator = oscillatorTemp;
+    }
+
+    public String getHeaders() {
+        return super.getHeaders() + ", Length of flow" + ", Height of flow" + ", Oscillator";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + this.getLengthOfFlow() + ", " + this.getHeightOfFlow() + ", "
+                + this.getOscillator();
     }
 
     public final double getLengthOfFlow() {

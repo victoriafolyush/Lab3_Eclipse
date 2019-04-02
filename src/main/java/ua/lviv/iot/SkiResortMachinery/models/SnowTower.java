@@ -8,12 +8,6 @@ public class SnowTower extends SkiResortMachinery {
     public SnowTower() {
     }
 
-    public SnowTower(final double heightTemp, final boolean hasBoardCopressorTemp, final int waterJetsTemp) {
-        this.height = heightTemp;
-        this.hasBoardCopressor = hasBoardCopressorTemp;
-        this.waterJets = waterJetsTemp;
-    }
-
     public SnowTower(final String nameTemp, final String producerTemp, final double fuelPerHourTemp,
             final double mileageTemp, final Fuel typeOfFuelTemp, final WheelFormula wheelFormulaTemp,
             final double heightTemp, final boolean hasBoardCopressorTemp, final int waterJetsTemp) {
@@ -21,6 +15,15 @@ public class SnowTower extends SkiResortMachinery {
         this.height = heightTemp;
         this.hasBoardCopressor = hasBoardCopressorTemp;
         this.waterJets = waterJetsTemp;
+    }
+
+    public final String getHeaders() {
+        return super.getHeaders() + ", Height" + ", Has board compressor" + ", Water jets";
+    }
+
+    public final String toCSV() {
+        return super.toCSV() + ", " + this.getHeight() + ", " + this.getHasBoardCopressor() + ", "
+                + this.getWaterJets();
     }
 
     public final double getHeight() {
@@ -31,7 +34,7 @@ public class SnowTower extends SkiResortMachinery {
         this.height = heightTemp;
     }
 
-    public final boolean isHasBoardCopressor() {
+    public final boolean getHasBoardCopressor() {
         return hasBoardCopressor;
     }
 

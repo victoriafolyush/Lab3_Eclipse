@@ -13,14 +13,6 @@ import ua.lviv.iot.SkiResortMachinery.models.WheelFormula;
 public class SkiResortMachineryManager {
     private List<SkiResortMachinery> machineryList = new LinkedList<SkiResortMachinery>();
 
-    final List<SkiResortMachinery> getMachineryList() {
-        return machineryList;
-    }
-
-    final void setMachineryList(final List<SkiResortMachinery> machineryListTemp) {
-        this.machineryList = machineryListTemp;
-    }
-
     public SkiResortMachineryManager() {
     }
 
@@ -42,23 +34,34 @@ public class SkiResortMachineryManager {
         return tempList;
     }
 
-    final List<SkiResortMachinery> sortByFuelLossPerHour(final List<SkiResortMachinery> tempList,
+    public final List<SkiResortMachinery> sortByFuelLossPerHour(final List<SkiResortMachinery> tempList,
             final boolean decreasing) {
         return generalSort(tempList, decreasing, Comparator.comparing(SkiResortMachinery::getFuelPerHour));
     }
 
-    final List<SkiResortMachinery> sortByMileage(final List<SkiResortMachinery> tempList, final boolean decreasing) {
+    public final List<SkiResortMachinery> sortByMileage(final List<SkiResortMachinery> tempList,
+            final boolean decreasing) {
         return generalSort(tempList, decreasing, Comparator.comparing(SkiResortMachinery::getMileage));
     }
 
-    final List<SkiResortMachinery> findByFuel(final Fuel typeOfFuelTemp, final List<SkiResortMachinery> tempList) {
+    public final List<SkiResortMachinery> findByFuel(final Fuel typeOfFuelTemp,
+            final List<SkiResortMachinery> tempList) {
         return tempList.stream().filter(machinery -> machinery.getTypeOfFuel().equals(typeOfFuelTemp))
                 .collect(Collectors.toList());
     }
 
-    final List<SkiResortMachinery> findByWheelFormula(final WheelFormula wheelFormulaTemp,
+    public final List<SkiResortMachinery> findByWheelFormula(final WheelFormula wheelFormulaTemp,
             final List<SkiResortMachinery> tempList) {
         return tempList.stream().filter(machinery -> machinery.getWheelFormula().equals(wheelFormulaTemp))
                 .collect(Collectors.toList());
     }
+
+    public final List<SkiResortMachinery> getMachineryList() {
+        return machineryList;
+    }
+
+    public final void setMachineryList(final List<SkiResortMachinery> machineryListTemp) {
+        this.machineryList = machineryListTemp;
+    }
+
 }

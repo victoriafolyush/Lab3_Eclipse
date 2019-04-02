@@ -6,14 +6,6 @@ public class SnowGenerator extends SkiResortMachinery {
     private double rotation;
 
     public SnowGenerator() {
-
-    }
-
-    public SnowGenerator(final double boardCompressorPowerTemp, final String nucleationTemp,
-            final double rotationTemp) {
-        this.boardCompressorPower = boardCompressorPowerTemp;
-        this.nucleation = nucleationTemp;
-        this.rotation = rotationTemp;
     }
 
     public SnowGenerator(final String name, final String producer, final double fuelPerHour, final double mileage,
@@ -23,6 +15,16 @@ public class SnowGenerator extends SkiResortMachinery {
         this.boardCompressorPower = boardCompressorPowerTemp;
         this.nucleation = nucleationTemp;
         this.rotation = rotationTemp;
+    }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", Board compressor power" + ", Nucleation" + ", Rotation";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + this.getBoardCompressorPower() + ", " + this.getNucleation() + ", "
+                + this.getRotation();
     }
 
     public final double getBoardCompressorPower() {

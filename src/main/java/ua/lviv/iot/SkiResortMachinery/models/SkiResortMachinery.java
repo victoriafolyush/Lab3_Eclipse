@@ -13,16 +13,25 @@ public class SkiResortMachinery {
 
     }
 
-    public SkiResortMachinery(final String nameTemp,
-            final String producerTemp, final double fuelPerHourTemp,
-            final double mileageTemp, final Fuel typeOfFuelTemp,
-            final WheelFormula wheelFormulaTemp) {
+    public SkiResortMachinery(final String nameTemp, final String producerTemp, final double fuelPerHourTemp,
+            final double mileageTemp, final Fuel typeOfFuelTemp, final WheelFormula wheelFormulaTemp) {
         this.name = nameTemp;
         this.producer = producerTemp;
         this.fuelPerHour = fuelPerHourTemp;
         this.mileage = mileageTemp;
         this.typeOfFuel = typeOfFuelTemp;
         this.wheelFormula = wheelFormulaTemp;
+    }
+
+    public String getHeaders() {
+        return "Name " + ", Producer" + ", Fuel per hour" + ", Mileage" + ", Type of fuel" + ", Wheel formula";
+
+    }
+
+    public String toCSV() {
+        return this.getName() + ", " + this.getProducer() + ", " + this.getFuelPerHour() + ", " + this.getMileage()
+                + ", " + this.getTypeOfFuel() + ", " + this.getWheelFormula();
+
     }
 
     public final String getName() {
@@ -75,12 +84,8 @@ public class SkiResortMachinery {
 
     @Override
     public String toString() {
-        return "Name = '" + name
-                + '\n' + ", Producer = '" + producer
-                + '\n' + ", Fuel per hour = " + fuelPerHour
-                + '\n' + ", Mileage = " + mileage
-                + '\n' + ", Type of fuel = " + typeOfFuel
-                + '\n' + ", Wheel formula = " + wheelFormula
-                + '\n';
+        return "Name = '" + name + '\n' + ", Producer = '" + producer + '\n' + ", Fuel per hour = " + fuelPerHour + '\n'
+                + ", Mileage = " + mileage + '\n' + ", Type of fuel = " + typeOfFuel + '\n' + ", Wheel formula = "
+                + wheelFormula + '\n';
     }
 }
