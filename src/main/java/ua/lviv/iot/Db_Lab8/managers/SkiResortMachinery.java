@@ -14,91 +14,98 @@ import ua.lviv.iot.Db_Lab8.models.WheelFormula;
 @Table(name = "skiresortmachinery")
 class SkiResortMachinery {
 
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    
-    @Column(name = "name")
-    private String name;
-    @Column(name = "producer")
-    private String producer;
-    @Column(name = "fuelPerHour")
-    private double fuelPerHour;
-    @Column(name = "mileage")
-    private double mileage;
-    @Column(name = "typeOfFuel")
-    private Fuel typeOfFuel;
-    @Column(name = "wheelFormula")
-    private WheelFormula wheelFormula;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 
-    public SkiResortMachinery() {
+	@Column(name = "name")
+	private String name;
+	@Column(name = "producer")
+	private String producer;
+	@Column(name = "fuelPerHour")
+	private double fuelPerHour;
+	@Column(name = "mileage")
+	private double mileage;
+	@Column(name = "typeOfFuel")
+	private Fuel typeOfFuel;
+	@Column(name = "wheelFormula")
+	private WheelFormula wheelFormula;
 
-    }
+	public SkiResortMachinery() {
 
-    public SkiResortMachinery(String name, String producer, double fuelPerHour, double mileage, Fuel typeOfFuel,
-            WheelFormula wheelFormula) {
-        super();
-        this.name = name;
-        this.producer = producer;
-        this.fuelPerHour = fuelPerHour;
-        this.mileage = mileage;
-        this.typeOfFuel = typeOfFuel;
-        this.wheelFormula = wheelFormula;
-    }
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getProducer() {
-        return producer;
-    }
+	public SkiResortMachinery(String name, String producer, double fuelPerHour, double mileage, Fuel typeOfFuel,
+			WheelFormula wheelFormula) {
+		super();
+		this.name = name;
+		this.producer = producer;
+		this.fuelPerHour = fuelPerHour;
+		this.mileage = mileage;
+		this.typeOfFuel = typeOfFuel;
+		this.wheelFormula = wheelFormula;
+	}
 
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public double getFuelPerHour() {
-        return fuelPerHour;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setFuelPerHour(double fuelPerHour) {
-        this.fuelPerHour = fuelPerHour;
-    }
+	public String getProducer() {
+		return producer;
+	}
 
-    public double getMileage() {
-        return mileage;
-    }
+	public void setProducer(String producer) {
+		this.producer = producer;
+	}
 
-    public void setMileage(double mileage) {
-        this.mileage = mileage;
-    }
+	public double getFuelPerHour() {
+		return fuelPerHour;
+	}
 
-    public Fuel getTypeOfFuel() {
-        return typeOfFuel;
-    }
+	public void setFuelPerHour(double fuelPerHour) {
+		this.fuelPerHour = fuelPerHour;
+	}
 
-    public void setTypeOfFuel(Fuel typeOfFuel) {
-        this.typeOfFuel = typeOfFuel;
-    }
+	public double getMileage() {
+		return mileage;
+	}
 
-    public WheelFormula getWheelFormula() {
-        return wheelFormula;
-    }
+	public void setMileage(double mileage) {
+		this.mileage = mileage;
+	}
 
-    public void setWheelFormula(WheelFormula wheelFormula) {
-        this.wheelFormula = wheelFormula;
-    }
+	public Fuel getTypeOfFuel() {
+		return typeOfFuel;
+	}
 
-    @Override
-    public String toString() {
-        return "SkiResortMachinery [name=" + name + ", producer=" + producer + ", fuelPerHour=" + fuelPerHour
-                + ", mileage=" + mileage + ", typeOfFuel=" + typeOfFuel + ", wheelFormula=" + wheelFormula + "]";
-    }
+	public void setTypeOfFuel(Fuel typeOfFuel) {
+		this.typeOfFuel = typeOfFuel;
+	}
+
+	public WheelFormula getWheelFormula() {
+		return wheelFormula;
+	}
+
+	public void setWheelFormula(WheelFormula wheelFormula) {
+		this.wheelFormula = wheelFormula;
+	}
+
+	@Override
+	public String toString() {
+		return "SkiResortMachinery [name=" + name + ", producer=" + producer + ", fuelPerHour=" + fuelPerHour
+				+ ", mileage=" + mileage + ", typeOfFuel=" + typeOfFuel + ", wheelFormula=" + wheelFormula + "]";
+	}
 
 }
